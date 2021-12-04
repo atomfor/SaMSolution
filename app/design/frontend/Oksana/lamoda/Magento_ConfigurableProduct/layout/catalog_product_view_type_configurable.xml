@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="main.content">
+            <container name="product.more.info.detailed" htmlTag="div" htmlClass="product more info detailed" after="-">
+                <block class="Magento\Catalog\Block\Product\View\Gallery"  name="image" template="Magento_ConfigurableProduct::product/view/image.phtml">
+                    <arguments>
+                        <argument name="gallery_options" xsi:type="object">Magento\Catalog\Block\Product\View\GalleryOptions</argument>
+                        <argument name="imageHelper" xsi:type="object">Magento\Catalog\Helper\Image</argument>
+                    </arguments>
+                </block>
+                <block class="Magento\Theme\Block\Html\Title" name="name" after="image" template="Magento_ConfigurableProduct::html/name.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="price" after="name" template="Magento_ConfigurableProduct::html/price.phtml"/>
+                <block class="Magento\Framework\View\Element\Template" name="button" after="price" template="Magento_ConfigurableProduct::html/button.phtml"/>
+             </container>
+        </referenceContainer>
+    </body>
+</page>
+
+
+
+
+
+
