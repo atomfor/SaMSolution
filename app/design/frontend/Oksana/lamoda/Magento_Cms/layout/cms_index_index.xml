@@ -10,7 +10,6 @@
         <referenceContainer name="content">
             <block class="Magento\Framework\View\Element\Template" name="new_home_page" template="Magento_Cms::home.phtml"/>
 
-
         </referenceContainer>
     </body>
 </page>
