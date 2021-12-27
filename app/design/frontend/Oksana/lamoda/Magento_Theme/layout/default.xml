@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+
+<page layout="3columns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <update handle="default_head_blocks"/>
+
+<!--    <body>-->
+<!--        <referenceContainer name="content">-->
+<!--            <block class="Magento\Framework\View\Element\Template" name="handlers_all_page" template="Magento_Theme::html/test.phtml"/>-->
+<!--        </referenceContainer>-->
+<!--    </body>-->
+
+    <body>
+        <referenceContainer name="footer-container" remove="true"/>
+        <referenceContainer name="before.body.end" remove="true"/>
+            <container name="custom-footer" label="Custom Footer" htmlTag="div" htmlClass="content">
+                <container name="pre-footer" label="Pre Footer" htmlTag="div" htmlClass="content">
+                    <block class="Magento\Framework\View\Element\Template" name="title_pre_footer" template="Magento_Theme::html/title_pre_footer.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="info_pre_footer" template="Magento_Theme::html/info_pre_footer.phtml" after="title_pre_footer"/>
+                </container>
+                <container name="column-footer" label="Column Footer" htmlTag="div" htmlClass="content" after="pre-footer">
+                    <block class="Magento\Framework\View\Element\Template" name="footer_contact_info"
+                           template="Magento_Theme::html/footer_contact_info.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer_links_block_1"
+                           template="Magento_Theme::html/footer_links_block_1.phtml" after="footer_contact_info"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer_links_block_2"
+                           template="Magento_Theme::html/footer_links_block_2.phtml" after="footer_links_block_1"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer_links_block_3"
+                           template="Magento_Theme::html/footer_links_block_3.phtml" after="footer_links_block_2"/>
+                </container>
+                <container name="after-footer" label="After Footer" htmlTag="div" htmlClass="content" after="column-footer">
+                    <block class="Magento\Theme\Block\Html\Footer" name="copyright" template="Magento_Theme::html/copyright.phtml"/>
+                    <block class="Magento\Framework\View\Element\Template" name="footer_icon"
+                           template="Magento_Theme::html/footer_icons.phtml" after="copyright"/>
+                </container>
+            </container>
+
+
+    </body>
+</page>
+
