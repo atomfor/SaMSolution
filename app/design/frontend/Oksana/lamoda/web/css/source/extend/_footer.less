@@ -1,0 +1,95 @@
+//  Common
+//  _____________________________________________
+
+& when (@media-common = true) {
+
+    .pre-footer {
+        background: @color-gray79;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: relative;
+        top: 90px;
+        display: grid;
+        grid-template-columns: 500px 800px;
+    }
+
+    .title-pre-footer {
+        text-color: @primary__color__darker;
+        font-weight: @font-weight__extrabold;
+        font-family: cursive;
+        font-size: 35px;
+        padding: 35px 0px 0px 50px;
+    }
+
+    .info-pre-footer {
+        font-style: @font-style__base;
+        font-size: 15px;
+        padding: 0px 30px 50px 50px;
+    }
+
+    .subscribe-custom-footer{
+        padding: 100px 0px 0px 30px;
+    }
+
+    .column-footer {
+        background:@color-gray89;
+        margin: 0px 15px 0px 20px;
+        padding: 120px 25px 50px 50px;
+        display: grid;
+        grid-template-columns: 325px 300px 300px 300px;
+    }
+
+    .after-footer {
+        margin: 15px 30px 15px 60px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+
+
+    .vragen {
+        .lib-icon-font(
+            @_icon-font-content: @icon-info,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+
+    }
+
+    .contact {
+        .lib-icon-font(
+            @_icon-font-content: @icon-comment,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+    }
+
+    .telephone {
+        .lib-icon-font(
+            @_icon-font-content: @icon-account,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+    }
+
+    .icon-info {
+        .lib-icon-font() {
+            @_icon-font-content: @icon-info;
+              .after-footer-icon();
+        }
+    }
+
+    .icon-flag {
+        .lib-icon-font() {
+            @_icon-font-content: @icon-flag;
+              .after-footer-icon();
+        }
+    }
+
+    .icon-help {
+        .lib-icon-font(){
+            @_icon-font-content: @icon-help;
+              .after-footer-icon();
+        }
+    }
+
+}
