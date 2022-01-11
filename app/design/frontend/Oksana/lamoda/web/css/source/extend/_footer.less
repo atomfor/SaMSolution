@@ -45,6 +45,11 @@
         grid-template-columns: 1fr auto;
     }
 
+    .after-footer-icon {
+        width: 30%;
+
+    }
+
 
     .vragen {
         .lib-icon-font(
@@ -52,7 +57,6 @@
             @_icon-font-size: @_contact-icon-font-size,
             @_icon-font-color: @_contact-icon-font-color
         );
-
     }
 
     .contact {
@@ -72,24 +76,43 @@
     }
 
     .icon-info {
-        .lib-icon-font() {
-            @_icon-font-content: @icon-info;
-              .after-footer-icon();
-        }
+        .lib-icon-font(@_icon-font-content: @icon-info);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
+
+    }
+
+    .icon-info::before {
+        border-radius: 50%;
+        border: 2px solid;
+        font-size: inherit;
+        line-height: normal;
+
     }
 
     .icon-flag {
-        .lib-icon-font() {
-            @_icon-font-content: @icon-flag;
-              .after-footer-icon();
-        }
+        .lib-icon-font(@_icon-font-content: @icon-flag);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
+    }
+
+    .icon-flag::before {
+        border-radius: 50%;
+        border: 2px solid;
+        font-size: inherit;
+        line-height: normal;
     }
 
     .icon-help {
-        .lib-icon-font(){
-            @_icon-font-content: @icon-help;
-              .after-footer-icon();
-        }
+        .lib-icon-font(@_icon-font-content: @icon-help);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
     }
 
+    .icon-help::before {
+        border-radius: 50%;
+        border: 2px solid;
+        font-size: inherit;
+        line-height: normal;
+    }
 }
