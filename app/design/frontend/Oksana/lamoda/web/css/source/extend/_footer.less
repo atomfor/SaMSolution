@@ -1,7 +1,8 @@
-//  Common
+ //
+//  Desktop
 //  _____________________________________________
 
-& when (@media-common = true) {
+.media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m){
 
     .pre-footer {
         background: @color-gray79;
@@ -40,16 +41,10 @@
     }
 
     .after-footer {
-        margin: 15px 30px 15px 60px;
+        margin: 0px 30px 15px 60px;
         display: grid;
         grid-template-columns: 1fr auto;
     }
-
-    .after-footer-icon {
-        width: 30%;
-
-    }
-
 
     .vragen {
         .lib-icon-font(
@@ -83,11 +78,7 @@
     }
 
     .icon-info::before {
-        border-radius: 50%;
-        border: 2px solid;
-        font-size: inherit;
-        line-height: normal;
-
+        .after-footer-icon_before();
     }
 
     .icon-flag {
@@ -97,10 +88,7 @@
     }
 
     .icon-flag::before {
-        border-radius: 50%;
-        border: 2px solid;
-        font-size: inherit;
-        line-height: normal;
+        .after-footer-icon_before();
     }
 
     .icon-help {
@@ -110,9 +98,130 @@
     }
 
     .icon-help::before {
-        border-radius: 50%;
-        border: 2px solid;
-        font-size: inherit;
-        line-height: normal;
+        .after-footer-icon_before();
+    }
+
+    small, .small {
+        padding: 40px;
     }
 }
+
+//
+//  Mobile
+//  _____________________________________________
+
+.media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
+    .pre-footer {
+        background: @color-gray79;
+        margin-left: 10%;
+        margin-right: 10%;
+        position: relative;
+        top: 90px;
+    }
+
+    .block.newsletter {
+        margin-bottom: 0px;
+    }
+    .block.newsletter .form.subscribe {
+        display: inline-block;
+    }
+
+    .title-pre-footer {
+        text-color: @primary__color__darker;
+        text-align: center;
+        font-weight: @font-weight__extrabold;
+        font-family: cursive;
+        font-size: 35px;
+        padding-top: 25px;
+    }
+
+    .info-pre-footer {
+        text-align: center;
+        font-style: @font-style__base;
+        font-size: 15px;
+    }
+
+    .subscribe-custom-footer {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .block.newsletter .actions {
+        padding: 10px 5px 10px 5px;
+    }
+
+    .block.newsletter .action.subscribe {
+            width: 328px;
+    }
+
+    .column-footer {
+        background: @color-gray89;
+        margin: 0px 15px 0px 20px;
+        padding: 120px 25px 50px 50px;
+        text-align: center;
+    }
+
+    .footer_contact_info {
+        padding-right: 80px;
+    }
+
+    .after-footer {
+        margin: 10px 30px 15px 60px;
+    }
+
+    .vragen {
+        .lib-icon-font(
+            @_icon-font-content: @icon-info,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+    }
+
+    .contact {
+        .lib-icon-font(
+            @_icon-font-content: @icon-comment,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+    }
+
+    .telephone {
+        .lib-icon-font(
+            @_icon-font-content: @icon-account,
+            @_icon-font-size: @_contact-icon-font-size,
+            @_icon-font-color: @_contact-icon-font-color
+        );
+    }
+
+    .icon-info {
+        .lib-icon-font(@_icon-font-content: @icon-info);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
+    }
+
+    .icon-info::before {
+        .after-footer-icon_before();
+    }
+
+    .icon-flag {
+        .lib-icon-font(@_icon-font-content: @icon-flag);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
+    }
+
+    .icon-flag::before {
+        .after-footer-icon_before();
+    }
+
+    .icon-help {
+        .lib-icon-font(@_icon-font-content: @icon-help);
+        font-size: @_after-footer-icon-font-size;
+        margin: @_after-footer-icon-margin;
+    }
+
+    .icon-help::before {
+        .after-footer-icon_before();
+    }
+}
+
+
+
