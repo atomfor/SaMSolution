@@ -4,18 +4,8 @@
 //  _____________________________________________
 
 & when (@media-common = true) {
-
-    h1 {
-        color: red;
-    }
-
-
-    a {
-        color: #44445b;
-    }
-
-    .action.primary, .action-primary {
-        background: #44445b;
+    body {
+        background: bisque;
     }
 }
 
@@ -24,14 +14,10 @@
 //  _____________________________________________
 
 .media-width(@extremum, @break) when (@extremum = 'min') and (@break = @screen__m) {
-
-    header {
-        padding: 0px 0px 10px 50px;
-    }
-
     body {
         background: bisque;
     }
+
 }
 
 //
@@ -40,6 +26,6 @@
 
 .media-width(@extremum, @break) when (@extremum = 'max') and (@break = @screen__m) {
     body {
-        background: blanchedalmond;
+        background: bisque;
     }
 }

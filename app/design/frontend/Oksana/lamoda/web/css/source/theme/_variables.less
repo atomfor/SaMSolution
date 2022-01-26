@@ -1,19 +1,27 @@
-
 @_contact-icon-font-size: 20px;
-@_contact-icon-font-color: @color-gray34;
+@_contact-icon-font-color: @color-gray43;
+
+@_after-footer-icon-font-size: 30px;
+@_after-footer-icon-border-radius: 50%;
+@_after-footer-icon-border: 2px solid;
+@_after-footer-icon-margin: 10px;
 
 
-    @_after-footer-icon-font-size: 30px;
-    @_after-footer-icon-border-radius: 50%;
-    @_after-footer-icon-border: 2px solid;
-    @_after-footer-icon-margin: 10px;
+.footer-contact-info-icon(
+    @_contact-icon-font-size: 20px,
+    @_contact-icon-font-color: @color-gray43
+){
+    font-size: @_contact-icon-font-size;
+    font-color: @_contact-icon-font-color;
+}
+
 
 
 .after-footer-icon_before(
-@border-radius: 50%,
-@border: 2px solid,
-@font-size: inherit,
-@line-height: normal
+    @border-radius: 50%,
+    @border: 2px solid,
+    @font-size: inherit,
+    @line-height: normal
 ){
     border-radius: @border-radius;
     border: @border;
